@@ -1,0 +1,18 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Generate Slug</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <form (ngSubmit)="generateSlug()" [formGroup]="createSlugForm">
+    <ion-input formControlName="url" type="url" placeholder="https://example.com"></ion-input>
+    <ion-button type="submit" color="primary" expand="block" shape="round">
+      Generate <ion-icon slot="end" name="link"></ion-icon>
+    </ion-button>
+  </form>
+</ion-content>
